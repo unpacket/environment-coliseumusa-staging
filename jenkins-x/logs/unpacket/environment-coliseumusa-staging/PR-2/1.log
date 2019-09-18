@@ -1,0 +1,81 @@
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-qx6l5[0m
+{"level":"warn","ts":1568829136.8796515,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568829136.8802538,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-k6v6b[0m
+{"level":"warn","ts":1568829137.8618355,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568829137.8630767,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-unpacket-environment-colis-x9ng5[0m
+{"level":"warn","ts":1568829141.9156928,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568829142.1033008,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-coliseumusa-staging.git @ 13954d36055f610daedef61291f37f268be82051 in path /workspace/source"}
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:13954d36055f610daedef61291f37f268be82051,2:77ab52d2dcf7ebe74bfee4c615582cf2defd1b59
+DEBUG: ran git fetch --unshallow origin 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59: 13954d36055f610daedef61291f37f268be82051: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 13954d36055f610daedef61291f37f268be82051 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59 in 
+Merged SHA 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59 with commit message 'chore: Promote golang to version 0.0.2' into base branch master
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59: 13954d36055f610daedef61291f37f268be82051: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 13954d36055f610daedef61291f37f268be82051 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59 in 
+Merged SHA 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59 with commit message 'chore: Promote golang to version 0.0.2' into base branch master
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-build-effective.yml
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for ********-environment-coliseumusa-staging-PR-2-1
+Applying changes 
+upserted PipelineResource ********-environment-coliseumus for the git repository https://github.com/********/environment-coliseumusa-staging.git
+upserted Task ********-environment-coliseumus-8gs24-from-build-pack-1
+upserted Pipeline ********-environment-coliseumus-8gs24-1
+created PipelineRun ********-environment-coliseumus-8gs24-1
+created PipelineStructure ********-environment-coliseumus-8gs24-1
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ntxz2[0m
+{"level":"warn","ts":1568829152.9839394,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568829152.9851334,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-m7z42[0m
+{"level":"warn","ts":1568829153.29245,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568829153.2957487,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-unpacket-environment-coliseumus-s7hnc[0m
+{"level":"warn","ts":1568829159.3541203,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568829159.5550935,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-coliseumusa-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:13954d36055f610daedef61291f37f268be82051,2:77ab52d2dcf7ebe74bfee4c615582cf2defd1b59
+DEBUG: ran git fetch origin 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59: 13954d36055f610daedef61291f37f268be82051: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 13954d36055f610daedef61291f37f268be82051 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59 in 
+Merged SHA 77ab52d2dcf7ebe74bfee4c615582cf2defd1b59 with commit message 'chore: Promote golang to version 0.0.2' into base branch master
+
+Showing logs for build [32munpacket-environment-coliseumus-8gs24-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
